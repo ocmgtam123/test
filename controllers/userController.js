@@ -20,9 +20,8 @@ const userController = {
     },
     getAll: async (req, res) => {
         try {
-            res.send("aaaaa");
-            //const user = await User.find();
-            //res.status(200).json(user);
+            const user = await User.find();
+            res.status(200).json(user);
         } catch (err) {
             res.status(500).json(err);
         }
