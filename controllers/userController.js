@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const userController = {
     add: async (req, res) => {
         try {
+            console.log(req.body);
             const result1 = await User.findOne({username: req.body.username}).count();
             if(result1==0){
                 const newUser = new User(req.body);
