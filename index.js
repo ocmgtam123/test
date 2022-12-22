@@ -10,7 +10,7 @@ const server = require("http").createServer(app);
 dotenv.config();
 //connect database mongodb
 mongoose.set('strictQuery', true);
-mongoose.connect((process.env.MONGODB_URL), () => {
+mongoose.connect("mongodb+srv://database_test:xbk3kr8NJV7S3gYC@clusterdatabasetest.0lqstqf.mongodb.net/database_test?retryWrites=true&w=majority", () => {
     console.log("Connected to mongodb");
 });
 app.use(bodyParser.urlencoded({ extended: false }));
