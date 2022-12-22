@@ -19,6 +19,9 @@ app.use(cors());
 
 const userRoute = require("./routes/user");
 app.use("/user", userRoute);
+app.get("/", (req,res)=>{
+    res.send("Hello");
+});
 
 server.listen(port, (req, res) => {
     console.log("Server is runing port: " + port);
