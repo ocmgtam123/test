@@ -11,7 +11,7 @@ dotenv.config();
 //connect database mongodb
 mongoose.set('strictQuery', true);
 mongoose.connect("mongodb+srv://database_test:xbk3kr8NJV7S3gYC@clusterdatabasetest.0lqstqf.mongodb.net/database_test?retryWrites=true&w=majority", () => {
-    console.log("Connected to mongodb");
+    console.log("Connected to mongodb mongodb+srv://database_test:xbk3kr8NJV7S3gYC@clusterdatabasetest.0lqstqf.mongodb.net/database_test?retryWrites=true&w=majority");
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
